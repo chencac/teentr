@@ -1,0 +1,26 @@
+<div class="flex justify-center items-center h-screen">
+    <%= form_for(@comment ) do |form| %>
+    
+      <div class="field">
+      <%= form.label :標題 %>
+      <%= form.text_field :title %>
+      </div>
+      <div class="field">
+      <%= form.label :內容 %>
+      <%= form.text_area :content %>
+      </div>
+      <div class="field">
+      <%= form.label :作者 %>
+      <%= form.text_area :author %>
+      </div>
+
+      <div class="field">
+      <%= form.label :評分 %>
+      <%= form.text_area :rating %>
+      </div>
+
+      <%= form.submit "編輯"%>
+    <% end %>
+    
+</div>
+<%= link_to "回首頁", comments_path%>

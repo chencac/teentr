@@ -1,0 +1,33 @@
+
+
+<p id="notice"><%= notice %></p>
+<p >
+<p>
+  <strong>作者:</strong>
+  <%= @comment.author %>
+</p>
+  <strong>評分:</strong>
+  <%= @comment.rating %>
+</p>
+
+<p >
+  <strong>標題:</strong>
+  <%= @comment.title %>
+</p>
+
+<p>
+  <strong>內容:</strong>
+  <%= @comment.content %>
+</p>
+
+<p>
+
+  <br>
+  <%= image_tag @comment.avatar.url if @comment.avatar.url.present? %>
+</p>
+
+<%= link_to 'Edit', edit_comment_path %> |
+<%= link_to 'Back', comments_path %>
+
+
+

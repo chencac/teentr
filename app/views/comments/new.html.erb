@@ -1,0 +1,33 @@
+<div class="flex justify-center items-center h-screen">
+    <%= form_for(@comment ) do |form| %>
+   
+      <div class="field">
+      <p><%= form.label :評分 %></p>
+      </div>
+      
+      <div class="field">
+      <p><%= form.label :發表您的評論%></p>
+      <%= form.text_area :content %>
+      </div>
+
+      <div class="field">
+      <p><%= form.label :使用者 %></p>
+      <%= form.text_area :author %>
+      </div>
+
+      <div class="field">
+      <p>
+      <%= form.label :標題 %>
+      </p>
+      <%= form.text_field :title %>
+      </div>
+      <div class="field">
+      <%= form.label :分享圖片 %>
+      <%= form.file_field :avatar %>
+      </div>
+      <%= form.submit "發表評論"%>
+      <% end %>
+     
+
+</div>
+<%= link_to "回首頁", comments_path%>
